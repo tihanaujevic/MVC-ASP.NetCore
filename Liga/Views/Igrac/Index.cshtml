@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Liga.Models.Igrac>
+
+@{
+    ViewData["Title"] = "Golovi";
+}
+
+<h1>Golovi</h1>
+
+<p>
+    <a asp-action="Index">Golovi</a>    &emsp; || &emsp;
+    <a asp-action="Asistencije">Asistencije</a>     &emsp;|| &emsp;
+    <a asp-action="Kartoni">Crveni kartoni</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ime
+            </th>
+            <th>
+                Prezime
+            </th>
+            <th>
+                Broj dresa
+            </th>
+            <th>
+                Klub
+            </th>
+            <th>
+                Pozicija
+            </th>
+            <th>
+                Golovi
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Where(item => item.Golovi!= null).OrderByDescending(item => item.Golovi)) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojDresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Klub1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pozicija1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Golovi)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

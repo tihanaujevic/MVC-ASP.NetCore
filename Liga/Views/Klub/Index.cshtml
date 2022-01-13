@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Liga.Models.Klub>
+
+@{
+    ViewData["Title"] = "Tablica";
+}
+
+<h1>Tablica</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Klub
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bodovi)
+            </th>
+            <th>
+                Postignuti golovi
+            </th>
+            <th>
+                Primljeni golovi
+            </th>
+            <th>
+                Grad
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderByDescending(item => item.Bodovi))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bodovi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostignutiGolovi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrimljeniGolovi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mjesto1)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

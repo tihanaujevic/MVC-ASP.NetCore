@@ -1,0 +1,53 @@
+﻿@model Liga.Models.Rezultat
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalji rezultata</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Klub
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Klub1)
+        </dd>
+        <dt class="col-sm-2">
+            Klub
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Klub2)
+        </dd>
+        <dt class="col-sm-2">
+            Rezultat
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rezultat1)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+        <dt class="col-sm-2">
+            Kolo
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Kolo)
+        </dd>
+        <dt class="col-sm-2">
+            Mjesto
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mjesto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Povratak</a>
+</div>

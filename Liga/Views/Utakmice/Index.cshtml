@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Liga.Models.Rezultat>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Raspored</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Klub
+            </th>
+            <th>
+                Klub
+            </th>
+            <th>
+                Kolo
+            </th>
+            <th>
+                Vrijeme
+            </th>
+            <th>
+                Mjesto
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(item => item.Rezultat1 == ""))
+        {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Klub1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Klub2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kolo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mjesto)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
