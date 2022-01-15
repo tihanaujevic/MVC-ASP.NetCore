@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Liga.Data;
+﻿using Liga.Data;
 using Liga.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace Liga.Controllers
 {
@@ -18,19 +15,19 @@ namespace Liga.Controllers
         }
         public IActionResult Index()
         {
-            
+
             var igraci = _context.Igracs.Select(x => new Igrac
             {
                 IdIgrac = x.IdIgrac,
-                Ime=x.Ime,
-                Prezime=x.Prezime,
-                BrojDresa=x.BrojDresa,
-                IdKlub=x.IdKlub,
-                Klub1=x.IdKlubNavigation.Naziv,
-                Pozicija1=x.IdPozicijaNavigation.NazivPozicije,
-                Karton=x.Kartonirani.BrojCrvenihKartona,
-                Asistencija=x.Asistenti.BrojAsistencija,
-                Golovi=x.Strijelci.BrojGolova
+                Ime = x.Ime,
+                Prezime = x.Prezime,
+                BrojDresa = x.BrojDresa,
+                IdKlub = x.IdKlub,
+                Klub1 = x.IdKlubNavigation.Naziv,
+                Pozicija1 = x.IdPozicijaNavigation.NazivPozicije,
+                Karton = x.Kartonirani.BrojCrvenihKartona,
+                Asistencija = x.Asistenti.BrojAsistencija,
+                Golovi = x.Strijelci.BrojGolova
             }).ToList();
 
             return View(igraci);

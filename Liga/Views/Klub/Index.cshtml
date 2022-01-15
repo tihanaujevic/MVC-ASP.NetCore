@@ -30,23 +30,23 @@
     <tbody>
         @foreach (var item in Model.OrderByDescending(item => item.Bodovi))
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Naziv)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Bodovi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostignutiGolovi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PrimljeniGolovi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Mjesto1)
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bodovi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostignutiGolovi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimljeniGolovi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mjesto1)
+            </td>
+        </tr>
         }
     </tbody>
 </table>

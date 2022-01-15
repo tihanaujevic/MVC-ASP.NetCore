@@ -1,8 +1,5 @@
-﻿using System;
+﻿using Liga.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Liga.Models;
-using System.Threading.Tasks;
 
 #nullable disable
 
@@ -22,7 +19,6 @@ namespace Liga.Data
         public virtual DbSet<Asistenti> Asistentis { get; set; }
         public virtual DbSet<Igrac> Igracs { get; set; }
 
-
         public virtual DbSet<Kartonirani> Kartoniranis { get; set; }
         public virtual DbSet<Klub> Klubs { get; set; }
         public virtual DbSet<Kola> Kolas { get; set; }
@@ -31,8 +27,6 @@ namespace Liga.Data
         public virtual DbSet<Rezultat> Rezultats { get; set; }
         public virtual DbSet<Strijelci> Strijelcis { get; set; }
         public virtual DbSet<Utakmice> Utakmices { get; set; }
-
-        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

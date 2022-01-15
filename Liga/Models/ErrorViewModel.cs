@@ -1,5 +1,3 @@
-using System;
-
 namespace Liga.Models
 {
     public class ErrorViewModel
